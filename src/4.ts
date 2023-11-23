@@ -30,6 +30,12 @@ class Person {
 abstract class House {
   door: boolean = false;
   private tenants: Person[] = [];
+  constructor(private key: Key) {}
+
+  comeIn(person: Person): void {
+    if (this.door) {
+    }
+  }
 }
 
 // Мій будинок (MyHouse): Створіть клас MyHouse, який успадковується від абстрактного класу House.
@@ -43,7 +49,7 @@ class myHouse extends House {
       console.log("The door is opened");
     } else {
       this.door = false;
-      console.log("The door is closed");
+      throw new Error("The door is closed");
     }
   }
 }
