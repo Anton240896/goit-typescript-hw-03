@@ -17,7 +17,13 @@ abstract class House {
   private tenants: Person[] = [];
 }
 
-class myHouse extends House {}
+class myHouse extends House {
+  openDoor(key: Key): void {
+    if (key.getSignature() === this.key.getSignature()) {
+      this.door = true;
+    } else console.log("Door close");
+  }
+}
 
 const key = new Key();
 
