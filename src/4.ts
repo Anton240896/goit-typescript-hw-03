@@ -5,9 +5,9 @@ class Person {
   }
 }
 class Key {
-  private quantity: number = Math.random();
-  getQuantity(): number {
-    return this.quantity;
+  private signature: number = Math.random();
+  getSignature(): number {
+    return this.signature;
   }
 }
 

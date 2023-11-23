@@ -3,11 +3,7 @@ class Employee {
   private department: string; // властивість department, яка буде доступна лише всередині класу Employee.
   protected salary: number; // salary, яке буде доступне лише всередині класу Employee та його підкласів.
 
-  constructor(name: string, department: string, salary: number) {
-    this.name = name;
-    this.department = department;
-    this.salary = salary;
-  }
+  constructor(name: string, department: string, salary: number) {}
 
   getEmployeeDetails() {
     return `Name: ${this.name}, Department: ${this.department}, Salary: ${this.salary}`;
