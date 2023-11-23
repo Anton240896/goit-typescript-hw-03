@@ -28,7 +28,7 @@ class Person {
 // Ваш абстрактний клас House також повинен мати абстрактний метод OpenDoor, який приймає об'єкт класу Key.
 
 abstract class House {
-  door: boolean = true || false;
+  door: boolean = false;
   private tenants: Person[] = [];
 }
 
