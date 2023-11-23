@@ -1,15 +1,23 @@
-class Person {
-  constructor(private key: Key) {}
-  getKey(): Key {
-    return this.key;
-  }
-}
 class Key {
   private signature: number = Math.random();
   getSignature(): number {
     return this.signature;
   }
 }
+
+class Person {
+  constructor(private key: Key) {}
+  getKey(): Key {
+    return this.key;
+  }
+}
+
+abstract class House {
+  door: boolean = false;
+  private tenants: Person[] = [];
+}
+
+class myHouse extends House {}
 
 const key = new Key();
 
