@@ -33,7 +33,8 @@ abstract class House {
   constructor(private key: Key) {}
 
   comeIn(person: Person): void {
-    if (this.door) {
+    if ((this.door = true)) {
+      this.tenants.push(person);
     }
   }
 }
