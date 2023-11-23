@@ -51,7 +51,7 @@ class MyHouse extends House {
     if (this.door === true) {
       console.log("The door is opened");
     } else {
-      this.door = false;
+      this.door === false;
       throw new Error("The door is closed");
     }
   }
