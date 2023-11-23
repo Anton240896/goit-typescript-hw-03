@@ -48,7 +48,7 @@ class MyHouse extends House {
   OpenDoor(key: Key): void {
     house.OpenDoor(person.getKey());
 
-    if ((this.door = true)) {
+    if (this.door === true) {
       console.log("The door is opened");
     } else {
       this.door = false;
