@@ -37,6 +37,7 @@ abstract class House {
       this.tenants.push(person);
     }
   }
+  abstract OpenDoor(key: Key): void;
 }
 
 // Мій будинок (MyHouse): Створіть клас MyHouse, який успадковується від абстрактного класу House.
