@@ -44,8 +44,8 @@ abstract class House {
 // Реалізуйте метод openDoor у цьому класі.
 // Якщо ключ, переданий цьому методу, збігається з ключем, збереженим як key, то двері відчиняються.
 
-class myHouse extends House {
-  openDoor(key: Key): void {
+class MyHouse extends House {
+  OpenDoor(key: Key): void {
     if (key.getSignature() === this.key.getSignature()) {
       this.door = true;
       console.log("The door is opened");
@@ -61,7 +61,7 @@ const key = new Key();
 const house = new MyHouse(key);
 const person = new Person(key);
 
-house.openDoor(person.getKey());
+house.OpenDoor(person.getKey());
 
 house.comeIn(person);
 

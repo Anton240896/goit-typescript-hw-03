@@ -1,20 +1,20 @@
 class Employee {
-  public name: string; // властивість name, яка буде доступна всім.
-  private department: string; // властивість department, яка буде доступна лише всередині класу Employee.
-  protected salary: number; // salary, яке буде доступне лише всередині класу Employee та його підкласів.
+  constructor(
+    public name: string,
+    private department: string,
+    protected salary: number
+  ) {}
 
-  constructor(name: string, department: string, salary: number) {}
-
-  getEmployeeDetails() {
+  getEmployeeDetails(): string {
     return `Name: ${this.name}, Department: ${this.department}, Salary: ${this.salary}`;
   }
 }
 
-// Клас Manager повинен бути підклас класу Employee
+//  Клас Manager повинен бути підклас класу Employee
 class Manager extends Employee {
+  //  Необхідно реалізувати в класі Manager конструктор,
+  // який викликатиме конструктор суперкласу та збільшуватиме salary на 10000.
   constructor(name: string, department: string, salary: number) {
-    //  Необхідно реалізувати в класі Manager конструктор,
-    // який викликатиме конструктор суперкласу та збільшуватиме salary на 10000.
     super(name, department, salary + 10000);
   }
 }
