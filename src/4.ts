@@ -28,7 +28,7 @@ class Person {
 // Ваш абстрактний клас House також повинен мати абстрактний метод OpenDoor, який приймає об'єкт класу Key.
 
 abstract class House {
-  door: boolean = false;
+  protected door: boolean = false;
   private tenants: Person[] = [];
   constructor(private key: Key) {}
 
@@ -46,12 +46,11 @@ abstract class House {
 
 class MyHouse extends House {
   OpenDoor(key: Key): void {
-    house.OpenDoor(person.getKey());
-
-    if (this.door === true) {
+    if (this.key.getSignature === key.getSignature) {
+      this.door = true;
       console.log("The door is opened");
     } else {
-      this.door === false;
+      this.door = false;
       throw new Error("The door is closed");
     }
   }
