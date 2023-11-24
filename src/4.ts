@@ -46,7 +46,7 @@ abstract class House {
 
 class MyHouse extends House {
   OpenDoor(key: Key): void {
-    if (this.key.getSignature === key.getSignature) {
+    if (this.key.getSignature() === key.getSignature()) {
       this.door = true;
       console.log("The door is opened");
     } else {
