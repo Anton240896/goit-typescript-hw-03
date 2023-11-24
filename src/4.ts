@@ -30,7 +30,7 @@ class Person {
 abstract class House {
   protected door: boolean = false;
   private tenants: Person[] = [];
-  constructor(private key: Key) {}
+  constructor(protected key: Key) {}
 
   comeIn(person: Person): void {
     if (this.door === true) {
